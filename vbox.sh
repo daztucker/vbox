@@ -465,7 +465,7 @@ while read -r line; do
   _timeout="$(echo "$line" | cut -d '|' -f 3 )"
   echo "========> Text:    $_text"
   echo "========> Keys:    $_keys"
-  echo "========> Timeout: $_keys"
+  echo "========> Timeout: $_timeout"
   if waitForText "$_osname" "$_text" "$_timeout"; then
     echo "Input keys: $_keys"
     input "$_osname" "$_keys"
